@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - EazyExchange</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>🔥 Free Shipping on Orders Over $35</span>
+            <span>📦 24h Dispatch | 30-Day Returns</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Eazy<span style="color: #FF6B35;">Exchange</span></h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for amazing deals...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Strip -->
+    <div class="categories-strip">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="fashion.html">Fashion</a>
+            <a href="electronics.html" style="color: #FF6B35; font-weight: bold;">Electronics</a>
+            <a href="home.html">Home</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="sports.html">Sports</a>
+            <a href="toys.html">Toys</a>
+            <a href="pets.html">Pets</a>
+            <a href="clearance.html">Clearance</a>
+        </div>
+    </div>
+
+    <!-- Category Header -->
+    <div class="category-header">
+        <div class="container">
+            <h1>Electronics</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Electronics</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section - All 20 Products -->
+    <section class="category-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Electronics</h2>
+                <div class="sort-dropdown">
+                    <select>
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/electronics/airpods.jpg" alt="Apple AirPods Pro" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Apple AirPods Pro (2nd Gen)</h3>
+                        <div class="product-price">$189.99</div>
+                        <div class="product-rating">★★★★★ <span>(15.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:201, name:'Apple AirPods Pro', price:189.99, image:'🎧'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:201, name:'Apple AirPods Pro', price:189.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/electronics/ipad.jpg" alt="iPad 10th Gen" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">iPad 10th Gen 10.9" 64GB</h3>
+                        <div class="product-price">$349.99</div>
+                        <div class="product-rating">★★★★★ <span>(8.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:202, name:'iPad 10th Gen', price:349.99, image:'📱'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:202, name:'iPad 10th Gen', price:349.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/electronics/macbook.jpg" alt="MacBook Air M2" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">MacBook Air 13" M2 Chip</h3>
+                        <div class="product-price">$949.99</div>
+                        <div class="product-rating">★★★★★ <span>(5.1k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:203, name:'MacBook Air M2', price:949.99, image:'💻'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:203, name:'MacBook Air M2', price:949.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="images/electronics/kindle.jpg" alt="Kindle Paperwhite" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Kindle Paperwhite 6.8"</h3>
+                        <div class="product-price">$119.99</div>
+                        <div class="product-rating">★★★★½ <span>(12.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:204, name:'Kindle Paperwhite', price:119.99, image:'📚'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:204, name:'Kindle Paperwhite', price:119.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="images/electronics/ring-camera.jpg" alt="Ring Video Doorbell" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Ring Video Doorbell Pro 2</h3>
+                        <div class="product-price">$179.99</div>
+                        <div class="product-rating">★★★★½ <span>(7.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:205, name:'Ring Doorbell Pro 2', price:179.99, image:'🔔'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:205, name:'Ring Doorbell Pro 2', price:179.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="images/electronics/nest-thermostat.jpg" alt="Google Nest Thermostat" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Google Nest Learning Thermostat</h3>
+                        <div class="product-price">$199.99</div>
+                        <div class="product-rating">★★★★½ <span>(6.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:206, name:'Nest Thermostat', price:199.99, image:'🌡️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:206, name:'Nest Thermostat', price:199.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="images/electronics/echo-dot.jpg" alt="Amazon Echo Dot" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Amazon Echo Dot (5th Gen)</h3>
+                        <div class="product-price">$39.99</div>
+                        <div class="product-rating">★★★★★ <span>(24.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:207, name:'Echo Dot 5th Gen', price:39.99, image:'🔊'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:207, name:'Echo Dot 5th Gen', price:39.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="images/electronics/ps5-controller.jpg" alt="PS5 DualSense Controller" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">PS5 DualSense Wireless Controller</h3>
+                        <div class="product-price">$64.99</div>
+                        <div class="product-rating">★★★★½ <span>(9.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:208, name:'PS5 DualSense Controller', price:64.99, image:'🎮'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:208, name:'PS5 DualSense Controller', price:64.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <img src="images/electronics/gopro.jpg" alt="GoPro Hero 12" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">GoPro HERO 12 Action Camera</h3>
+                        <div class="product-price">$349.99</div>
+                        <div class="product-rating">★★★★½ <span>(4.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:209, name:'GoPro Hero 12', price:349.99, image:'📹'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:209, name:'GoPro Hero 12', price:349.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <img src="images/electronics/dyson-vacuum.jpg" alt="Dyson V15 Vacuum" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Dyson V15 Detect Cordless Vacuum</h3>
+                        <div class="product-price">$599.99</div>
+                        <div class="product-rating">★★★★½ <span>(3.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:210, name:'Dyson V15 Vacuum', price:599.99, image:'🧹'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:210, name:'Dyson V15 Vacuum', price:599.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <img src="images/electronics/roomba.jpg" alt="iRobot Roomba j7+" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">iRobot Roomba j7+ Robot Vacuum</h3>
+                        <div class="product-price">$649.99</div>
+                        <div class="product-rating">★★★★★ <span>(2.9k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:211, name:'Roomba j7+', price:649.99, image:'🤖'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:211, name:'Roomba j7+', price:649.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <img src="images/electronics/sonos-speaker.jpg" alt="Sonos One SL" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Sonos One SL Wireless Speaker</h3>
+                        <div class="product-price">$189.99</div>
+                        <div class="product-rating">★★★★½ <span>(2.1k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:212, name:'Sonos One SL', price:189.99, image:'🔊'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:212, name:'Sonos One SL', price:189.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <img src="images/electronics/ninja-blender.jpg" alt="Ninja Professional Blender" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Ninja Professional Plus Blender</h3>
+                        <div class="product-price">$99.99</div>
+                        <div class="product-rating">★★★★★ <span>(10.5k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:213, name:'Ninja Blender', price:99.99, image:'🥤'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:213, name:'Ninja Blender', price:99.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <img src="images/electronics/keurig.jpg" alt="Keurig K-Elite" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Keurig K-Elite Coffee Maker</h3>
+                        <div class="product-price">$139.99</div>
+                        <div class="product-rating">★★★★½ <span>(14.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:214, name:'Keurig K-Elite', price:139.99, image:'☕'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:214, name:'Keurig K-Elite', price:139.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <img src="images/electronics/instant-pot.jpg" alt="Instant Pot Duo" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Instant Pot Duo 7-in-1 6qt</h3>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-rating">★★★★★ <span>(22.1k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:215, name:'Instant Pot Duo', price:89.99, image:'🍲'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:215, name:'Instant Pot Duo', price:89.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <img src="images/electronics/air-fryer.jpg" alt="COSORI Air Fryer" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">COSORI Air Fryer 5.8qt</h3>
+                        <div class="product-price">$99.99</div>
+                        <div class="product-rating">★★★★★ <span>(18.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:216, name:'COSORI Air Fryer', price:99.99, image:'🍟'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:216, name:'COSORI Air Fryer', price:99.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <img src="images/electronics/fitbit.jpg" alt="Fitbit Charge 6" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Fitbit Charge 6 Fitness Tracker</h3>
+                        <div class="product-price">$139.99</div>
+                        <div class="product-rating">★★★★½ <span>(7.9k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:217, name:'Fitbit Charge 6', price:139.99, image:'⌚'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:217, name:'Fitbit Charge 6', price:139.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <img src="images/electronics/logitech-mouse.jpg" alt="Logitech MX Master 3S" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Logitech MX Master 3S Mouse</h3>
+                        <div class="product-price">$79.99</div>
+                        <div class="product-rating">★★★★½ <span>(6.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:218, name:'Logitech MX Master 3S', price:79.99, image:'🖱️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:218, name:'Logitech MX Master 3S', price:79.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card">
+                    <img src="images/electronics/anker-charger.jpg" alt="Anker Power Bank" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Anker 20,000mAh Power Bank</h3>
+                        <div class="product-price">$49.99</div>
+                        <div class="product-rating">★★★★★ <span>(16.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:219, name:'Anker Power Bank', price:49.99, image:'🔋'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:219, name:'Anker Power Bank', price:49.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card">
+                    <img src="images/electronics/external-ssd.jpg" alt="Samsung T7 SSD" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Samsung T7 Portable SSD 1TB</h3>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-rating">★★★★★ <span>(5.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:220, name:'Samsung T7 SSD', price:89.99, image:'💾'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:220, name:'Samsung T7 SSD', price:89.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Checkout with Telegram
+            </button>
+            <p class="shipping-note">Free shipping over $35</p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" onclick="closeImageModal()">
+        <span onclick="closeImageModal()">&times;</span>
+        <img id="modalImage" src="" alt="Product Image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>EazyExchange is your premier online destination for amazing deals on top brands. We connect you with quality products at unbeatable prices.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('📚 Visit our FAQ page for answers to common questions'); return false;">FAQ</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📦 Free shipping on orders over $35. Standard shipping 3-5 business days'); return false;">Shipping Info</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔄 30-day hassle-free returns. Items must be unused in original packaging'); return false;">Returns</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔍 Track your order using the tracking link sent to your email'); return false;">Track Order</a></li>
+                        <li><a href="#" onclick="showCustomNotification('💳 We accept: Gift Cards, Cash App, Cryptocurrency (BTC, ETH, USDT)'); return false;">Payment Methods</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('🏢 EazyExchange - Founded 2024. Your trusted online marketplace.'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📞 Contact us via WhatsApp +44 7536613651'); return false;">Contact</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📜 Read our terms and conditions'); return false;">Terms of Service</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔒 We respect your privacy. Read our privacy policy'); return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact & Payment</h4>
+                    <a href="https://wa.me/15551234567" class="whatsapp-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +44 7536613651
+                    </a>
+                    <div class="payment-methods">
+                        <p><strong>Secure Payment Methods:</strong></p>
+                        <p>• Gift Cards (Amazon, Visa, Mastercard)</p>
+                        <p>• Cash App ($Cashtag: @EazyExchange)</p>
+                        <p>• Cryptocurrency (BTC, ETH, USDT)</p>
+                        <p><strong>Payment Terms:</strong> 30% deposit required to secure your order. Balance due before shipping.</p>
+                        <p style="margin-top:8px;"><i class="fas fa-shield-alt"></i> 100% Buyer Protection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EazyExchange. All rights reserved. Your trusted online marketplace.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Image modal functions
+        function openImageModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+        
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

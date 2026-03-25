@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports - EazyExchange</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>🔥 Free Shipping on Orders Over $35</span>
+            <span>📦 24h Dispatch | 30-Day Returns</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Eazy<span style="color: #FF6B35;">Exchange</span></h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for amazing deals...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Strip -->
+    <div class="categories-strip">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="fashion.html">Fashion</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="home.html">Home</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="sports.html" style="color: #FF6B35; font-weight: bold;">Sports</a>
+            <a href="toys.html">Toys</a>
+            <a href="pets.html">Pets</a>
+            <a href="clearance.html">Clearance</a>
+        </div>
+    </div>
+
+    <!-- Category Header -->
+    <div class="category-header">
+        <div class="container">
+            <h1>Sports & Outdoors</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Sports</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section - All 20 Products -->
+    <section class="category-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sports</h2>
+                <div class="sort-dropdown">
+                    <select>
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/sports/yoga-mat-manduka.jpg" alt="Manduka PRO Yoga Mat" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Manduka PRO Yoga Mat</h3>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-rating">★★★★★ <span>(4.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:601, name:'Manduka PRO Yoga Mat', price:89.99, image:'🧘'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:601, name:'Manduka PRO Yoga Mat', price:89.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/sports/lululemon-sports-bra.jpg" alt="Lululemon Energy Bra" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Lululemon Energy Bra</h3>
+                        <div class="product-price">$48.99</div>
+                        <div class="product-rating">★★★★½ <span>(3.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:602, name:'Lululemon Energy Bra', price:48.99, image:'💪'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:602, name:'Lululemon Energy Bra', price:48.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/sports/nike-running-shoes.jpg" alt="Nike Pegasus Running Shoes" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Nike Pegasus Running Shoes</h3>
+                        <div class="product-price">$109.99</div>
+                        <div class="product-rating">★★★★½ <span>(6.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:603, name:'Nike Pegasus 40', price:109.99, image:'👟'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:603, name:'Nike Pegasus 40', price:109.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="images/sports/adidas-ultraboost.jpg" alt="Adidas Ultraboost" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Adidas Ultraboost 22</h3>
+                        <div class="product-price">$139.99</div>
+                        <div class="product-rating">★★★★★ <span>(5.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:604, name:'Adidas Ultraboost 22', price:139.99, image:'👟'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:604, name:'Adidas Ultraboost 22', price:139.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="images/sports/under-armour-leggings.jpg" alt="Under Armour HeatGear Leggings" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Under Armour HeatGear Leggings</h3>
+                        <div class="product-price">$44.99</div>
+                        <div class="product-rating">★★★★½ <span>(4.9k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:605, name:'UA HeatGear Leggings', price:44.99, image:'🧘'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:605, name:'UA HeatGear Leggings', price:44.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="images/sports/hydro-flask.jpg" alt="Hydro Flask Water Bottle" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Hydro Flask 32oz Water Bottle</h3>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-rating">★★★★★ <span>(12.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:606, name:'Hydro Flask 32oz', price:34.99, image:'💧'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:606, name:'Hydro Flask 32oz', price:34.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="images/sports/fitbit-charge.jpg" alt="Fitbit Charge 5" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Fitbit Charge 5 Tracker</h3>
+                        <div class="product-price">$129.99</div>
+                        <div class="product-rating">★★★★½ <span>(5.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:607, name:'Fitbit Charge 5', price:129.99, image:'⌚'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:607, name:'Fitbit Charge 5', price:129.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="images/sports/garmin-watch.jpg" alt="Garmin Forerunner 255" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Garmin Forerunner 255</h3>
+                        <div class="product-price">$299.99</div>
+                        <div class="product-rating">★★★★★ <span>(2.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:608, name:'Garmin Forerunner 255', price:299.99, image:'⌚'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:608, name:'Garmin Forerunner 255', price:299.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <img src="images/sports/yeti-rambler.jpg" alt="YETI Rambler Tumbler" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">YETI Rambler 20oz Tumbler</h3>
+                        <div class="product-price">$24.99</div>
+                        <div class="product-rating">★★★★★ <span>(9.5k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:609, name:'YETI Rambler 20oz', price:24.99, image:'🥤'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:609, name:'YETI Rambler 20oz', price:24.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <img src="images/sports/theragun.jpg" alt="Theragun Mini" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Theragun Mini Massager</h3>
+                        <div class="product-price">$169.99</div>
+                        <div class="product-rating">★★★★½ <span>(3.1k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:610, name:'Theragun Mini', price:169.99, image:'🔨'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:610, name:'Theragun Mini', price:169.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <img src="images/sports/resistance-bands.jpg" alt="Resistance Bands Set" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Resistance Bands Set</h3>
+                        <div class="product-price">$29.99</div>
+                        <div class="product-rating">★★★★½ <span>(7.6k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:611, name:'Resistance Bands Set', price:29.99, image:'🏋️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:611, name:'Resistance Bands Set', price:29.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <img src="images/sports/jump-rope.jpg" alt="Crossrope Jump Rope" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Crossrope Jump Rope</h3>
+                        <div class="product-price">$59.99</div>
+                        <div class="product-rating">★★★★½ <span>(4.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:612, name:'Crossrope Jump Rope', price:59.99, image:'🪢'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:612, name:'Crossrope Jump Rope', price:59.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <img src="images/sports/ab-roller.jpg" alt="Ab Roller Wheel" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Perfect Ab Carver Pro</h3>
+                        <div class="product-price">$24.99</div>
+                        <div class="product-rating">★★★★☆ <span>(5.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:613, name:'Ab Carver Pro', price:24.99, image:'💪'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:613, name:'Ab Carver Pro', price:24.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <img src="images/sports/kettlebell.jpg" alt="Kettlebell" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">20lb Cast Iron Kettlebell</h3>
+                        <div class="product-price">$32.99</div>
+                        <div class="product-rating">★★★★☆ <span>(3.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:614, name:'20lb Kettlebell', price:32.99, image:'🏋️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:614, name:'20lb Kettlebell', price:32.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <img src="images/sports/dumbbells-set.jpg" alt="Bowflex Adjustable Dumbbells" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Bowflex SelectTech 552 Dumbbells</h3>
+                        <div class="product-price">$349.99</div>
+                        <div class="product-rating">★★★★★ <span>(2.9k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:615, name:'Bowflex 552 Dumbbells', price:349.99, image:'🏋️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:615, name:'Bowflex 552 Dumbbells', price:349.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <img src="images/sports/pull-up-bar.jpg" alt="Iron Gym Pull-Up Bar" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Iron Gym Pull-Up Bar</h3>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-rating">★★★★½ <span>(6.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:616, name:'Iron Gym Pull-Up Bar', price:34.99, image:'🏋️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:616, name:'Iron Gym Pull-Up Bar', price:34.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <img src="images/sports/foam-roller.jpg" alt="TriggerPoint Foam Roller" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">TriggerPoint Foam Roller</h3>
+                        <div class="product-price">$39.99</div>
+                        <div class="product-rating">★★★★½ <span>(5.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:617, name:'TriggerPoint Foam Roller', price:39.99, image:'🌀'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:617, name:'TriggerPoint Foam Roller', price:39.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <img src="images/sports/patagonia-hiking.jpg" alt="Patagonia Hiking Pants" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Patagonia Hiking Pants</h3>
+                        <div class="product-price">$69.99</div>
+                        <div class="product-rating">★★★★½ <span>(3.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:618, name:'Patagonia Hiking Pants', price:69.99, image:'🥾'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:618, name:'Patagonia Hiking Pants', price:69.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card">
+                    <img src="images/sports/merrell-hiking.jpg" alt="Merrell Moab Hiking Boots" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Merrell Moab 3 Boots</h3>
+                        <div class="product-price">$119.99</div>
+                        <div class="product-rating">★★★★★ <span>(4.1k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:619, name:'Merrell Moab 3', price:119.99, image:'🥾'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:619, name:'Merrell Moab 3', price:119.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card">
+                    <img src="images/sports/osprey-backpack.jpg" alt="Osprey Daylite Backpack" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Osprey Daylite Backpack</h3>
+                        <div class="product-price">$54.99</div>
+                        <div class="product-rating">★★★★★ <span>(5.5k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:620, name:'Osprey Daylite Pack', price:54.99, image:'🎒'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:620, name:'Osprey Daylite Pack', price:54.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Checkout with Telegram
+            </button>
+            <p class="shipping-note">Free shipping for first time customers</p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" onclick="closeImageModal()">
+        <span onclick="closeImageModal()">&times;</span>
+        <img id="modalImage" src="" alt="Product Image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>EazyExchange is your premier online destination for amazing deals on top brands. We connect you with quality products at unbeatable prices.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('📚 Visit our FAQ page for answers to common questions'); return false;">FAQ</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📦 Free shipping on orders over $35. Standard shipping 3-5 business days'); return false;">Shipping Info</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔄 30-day hassle-free returns. Items must be unused in original packaging'); return false;">Returns</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔍 Track your order using the tracking link sent to your email'); return false;">Track Order</a></li>
+                        <li><a href="#" onclick="showCustomNotification('💳 We accept: Gift Cards, Cash App, Cryptocurrency (BTC, ETH, USDT)'); return false;">Payment Methods</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('🏢 EazyExchange - Founded 2024. Your trusted online marketplace.'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📞 Contact us via WhatsApp +44 7536613651'); return false;">Contact</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📜 Read our terms and conditions'); return false;">Terms of Service</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔒 We respect your privacy. Read our privacy policy'); return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact & Payment</h4>
+                    <a href="https://wa.me/15551234567" class="whatsapp-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +44 7536613651
+                    </a>
+                    <div class="payment-methods">
+                        <p><strong>Secure Payment Methods:</strong></p>
+                        <p>• Gift Cards (Amazon, Visa, Mastercard)</p>
+                        <p>• Cash App ($Cashtag: @EazyExchange)</p>
+                        <p>• Cryptocurrency (BTC, ETH, USDT)</p>
+                        <p><strong>Payment Terms:</strong> 30% deposit required to secure your order. Balance due before shipping.</p>
+                        <p style="margin-top:8px;"><i class="fas fa-shield-alt"></i> 100% Buyer Protection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EazyExchange. All rights reserved. Your trusted online marketplace.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function openImageModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+        
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

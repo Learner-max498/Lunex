@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Living - EazyExchange</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>🔥 Free Shipping on Orders Over $35</span>
+            <span>📦 24h Dispatch | 30-Day Returns</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Eazy<span style="color: #FF6B35;">Exchange</span></h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for amazing deals...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Strip -->
+    <div class="categories-strip">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="fashion.html">Fashion</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="home.html" style="color: #FF6B35; font-weight: bold;">Home & Living</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="sports.html">Sports</a>
+            <a href="toys.html">Toys</a>
+            <a href="pets.html">Pets</a>
+            <a href="clearance.html">Clearance</a>
+        </div>
+    </div>
+
+    <!-- Category Header -->
+    <div class="category-header">
+        <div class="container">
+            <h1>Home & Living</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Home & Living</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section - All 20 Products with Generic Descriptions -->
+    <section class="category-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Home & Living</h2>
+                <!-- Sort dropdown removed via CSS -->
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 - Crate & Barrel Candle -->
+                <div class="product-card">
+                    <img src="images/home/crate-barrel-candle.jpg" alt="Scented Candle" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Scented Candle</h3>
+                        <div class="product-price">$27.99</div>
+                        <div class="product-rating">★★★★½ <span>(3.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:401, name:'Scented Candle', price:27.99, image:'🕯️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:401, name:'Scented Candle', price:27.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 - West Elm Mirror -->
+                <div class="product-card">
+                    <img src="images/home/west-elm-mirror.jpg" alt="Floor Mirror" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Floor Mirror</h3>
+                        <div class="product-price">$249.99</div>
+                        <div class="product-rating">★★★★★ <span>(1.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:402, name:'Floor Mirror', price:249.99, image:'🪞'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:402, name:'Floor Mirror', price:249.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 - Pottery Barn Throw -->
+                <div class="product-card">
+                    <img src="images/home/pottery-barn-throw.jpg" alt="Chunky Knit Throw" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Chunky Knit Throw</h3>
+                        <div class="product-price">$69.99</div>
+                        <div class="product-rating">★★★★½ <span>(4.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:403, name:'Chunky Knit Throw', price:69.99, image:'🧶'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:403, name:'Chunky Knit Throw', price:69.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 - IKEA Lamp -->
+                <div class="product-card">
+                    <img src="images/home/ikea-lamp.jpg" alt="Floor Lamp" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Floor Lamp</h3>
+                        <div class="product-price">$54.99</div>
+                        <div class="product-rating">★★★★☆ <span>(6.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:404, name:'Floor Lamp', price:54.99, image:'💡'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:404, name:'Floor Lamp', price:54.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Le Creuset Dutch Oven -->
+                <div class="product-card">
+                    <img src="images/home/le-creuset-dutch.jpg" alt="Dutch Oven" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Dutch Oven</h3>
+                        <div class="product-price">$279.99</div>
+                        <div class="product-rating">★★★★★ <span>(2.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:405, name:'Dutch Oven', price:279.99, image:'🍲'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:405, name:'Dutch Oven', price:279.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 - All-Clad Pan -->
+                <div class="product-card">
+                    <img src="images/home/all-clad-pan.jpg" alt="Fry Pan" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Fry Pan</h3>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-rating">★★★★½ <span>(5.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:406, name:'Fry Pan', price:89.99, image:'🍳'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:406, name:'Fry Pan', price:89.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 - KitchenAid Mixer -->
+                <div class="product-card">
+                    <img src="images/home/williams-sonoma-mixer.jpg" alt="Stand Mixer" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Stand Mixer</h3>
+                        <div class="product-price">$349.99</div>
+                        <div class="product-rating">★★★★★ <span>(7.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:407, name:'Stand Mixer', price:349.99, image:'🥣'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:407, name:'Stand Mixer', price:349.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 - Lush Bath Bomb -->
+                <div class="product-card">
+                    <img src="images/home/bath-bomb.jpg" alt="Bath Bomb Set" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Bath Bomb Set</h3>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-rating">★★★★½ <span>(9.6k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:408, name:'Bath Bomb Set', price:34.99, image:'🛀'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:408, name:'Bath Bomb Set', price:34.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 - Crate & Barrel Plates -->
+                <div class="product-card">
+                    <img src="images/home/crate-barrel-plates.jpg" alt="Dinnerware Set" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Dinnerware Set</h3>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-rating">★★★★★ <span>(4.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:409, name:'Dinnerware Set', price:89.99, image:'🍽️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:409, name:'Dinnerware Set', price:89.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 - Threshold Blanket -->
+                <div class="product-card">
+                    <img src="images/home/threshold-blanket.jpg" alt="Faux Fur Blanket" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Faux Fur Blanket</h3>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-rating">★★★★½ <span>(8.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:410, name:'Faux Fur Blanket', price:34.99, image:'🧸'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:410, name:'Faux Fur Blanket', price:34.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 - Casper Pillow -->
+                <div class="product-card">
+                    <img src="images/home/casper-pillow.jpg" alt="Pillow" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Pillow</h3>
+                        <div class="product-price">$59.99</div>
+                        <div class="product-rating">★★★★½ <span>(5.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:411, name:'Pillow', price:59.99, image:'🛏️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:411, name:'Pillow', price:59.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 - Boll & Branch Sheets -->
+                <div class="product-card">
+                    <img src="images/home/boll-branch-sheets.jpg" alt="Sheets" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Sheets</h3>
+                        <div class="product-price">$239.99</div>
+                        <div class="product-rating">★★★★★ <span>(1.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:412, name:'Sheets', price:239.99, image:'🛏️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:412, name:'Sheets', price:239.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 - Yankee Candle -->
+                <div class="product-card">
+                    <img src="images/home/yankee-candle.jpg" alt="Candle" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Candle</h3>
+                        <div class="product-price">$24.99</div>
+                        <div class="product-rating">★★★★½ <span>(12.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:413, name:'Candle', price:24.99, image:'🕯️'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:413, name:'Candle', price:24.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 - OXO Grips -->
+                <div class="product-card">
+                    <img src="images/home/oxo-grips.jpg" alt="Kitchen Tool Set" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Kitchen Tool Set</h3>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-rating">★★★★★ <span>(7.5k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:414, name:'Kitchen Tool Set', price:34.99, image:'🍴'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:414, name:'Kitchen Tool Set', price:34.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 15 - Simplehuman Soap Dispenser -->
+                <div class="product-card">
+                    <img src="images/home/simplehuman-soap.jpg" alt="Soap Dispenser" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Soap Dispenser</h3>
+                        <div class="product-price">$39.99</div>
+                        <div class="product-rating">★★★★☆ <span>(4.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:415, name:'Soap Dispenser', price:39.99, image:'🧼'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:415, name:'Soap Dispenser', price:39.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 16 - Zwilling Knife -->
+                <div class="product-card">
+                    <img src="images/home/zwilling-knife.jpg" alt="Chef's Knife" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Chef's Knife</h3>
+                        <div class="product-price">$119.99</div>
+                        <div class="product-rating">★★★★½ <span>(3.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:416, name:'Chef\'s Knife', price:119.99, image:'🔪'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:416, name:'Chef\'s Knife', price:119.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 17 - CamelBak Water Bottle -->
+                <div class="product-card">
+                    <img src="images/home/camelbak-water.jpg" alt="Water Bottle" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Water Bottle</h3>
+                        <div class="product-price">$19.99</div>
+                        <div class="product-rating">★★★★½ <span>(9.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:417, name:'Water Bottle', price:19.99, image:'💧'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:417, name:'Water Bottle', price:19.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 18 - Hydro Flask -->
+                <div class="product-card">
+                    <img src="images/home/hydroflask.jpg" alt="Water Bottle 40oz" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Water Bottle 40oz</h3>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-rating">★★★★★ <span>(15.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:418, name:'Water Bottle 40oz', price:34.99, image:'🧊'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:418, name:'Water Bottle 40oz', price:34.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 19 - Yeti Cooler -->
+                <div class="product-card">
+                    <img src="images/home/yeti-cooler.jpg" alt="Cooler" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Cooler</h3>
+                        <div class="product-price">$249.99</div>
+                        <div class="product-rating">★★★★★ <span>(2.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:419, name:'Cooler', price:249.99, image:'🧊'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:419, name:'Cooler', price:249.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 20 - Dyson Fan -->
+                <div class="product-card">
+                    <img src="images/home/dyson-fan.jpg" alt="Fan" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Fan</h3>
+                        <div class="product-price">$449.99</div>
+                        <div class="product-rating">★★★★½ <span>(1.5k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:420, name:'Fan', price:449.99, image:'🌀'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:420, name:'Fan', price:449.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Checkout with WhatsApp
+            </button>
+            <p class="shipping-note">Free shipping over $35</p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" onclick="closeImageModal()">
+        <span onclick="closeImageModal()">&times;</span>
+        <img id="modalImage" src="" alt="Product Image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>EazyExchange is your premier online destination for amazing deals on top brands. We connect you with quality products at unbeatable prices.</p>
+                    <!-- Social icons removed via CSS -->
+                </div>
+                <div class="footer-section">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('📚 Visit our FAQ page for answers to common questions'); return false;">FAQ</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📦 Free shipping on orders over $35. Standard shipping 3-5 business days'); return false;">Shipping Info</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔄 30-day hassle-free returns. Items must be unused in original packaging'); return false;">Returns</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔍 Track your order using the tracking link sent to your email'); return false;">Track Order</a></li>
+                        <li><a href="#" onclick="showCustomNotification('💳 We accept: Gift Cards, Cash App, Cryptocurrency (BTC, ETH, USDT)'); return false;">Payment Methods</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('🏢 EazyExchange - Founded 2024. Your trusted online marketplace.'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📞 Contact us via WhatsApp +44 7536613651'); return false;">Contact</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📜 Read our terms and conditions'); return false;">Terms of Service</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔒 We respect your privacy. Read our privacy policy'); return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact & Payment</h4>
+                    <a href="https://wa.me/15551234567" class="whatsapp-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +44 7536613651
+                    </a>
+                    <div class="payment-methods">
+                        <p><strong>Secure Payment Methods:</strong></p>
+                        <p>• Gift Cards (Amazon, Visa, Mastercard)</p>
+                        <p>• Cash App ($Cashtag: @EazyExchange)</p>
+                        <p>• Cryptocurrency (BTC, ETH, USDT)</p>
+                        <p><strong>Payment Terms:</strong> 30% deposit required to secure your order. Balance due before shipping.</p>
+                        <p style="margin-top:8px;"><i class="fas fa-shield-alt"></i> 100% Buyer Protection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EazyExchange. All rights reserved. Your trusted online marketplace.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function openImageModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+        
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EazyExchange - Daily Deals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>🔥 Free Shipping on Orders Over $35</span>
+            <span>📦 24h Dispatch | 30-Day Returns</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Eazy<span style="color: #FF6B35;">Exchange</span></h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for amazing deals...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Strip -->
+    <div class="categories-strip">
+        <div class="container">
+            <a href="index.html" style="color: #FF6B35; font-weight: bold;">Home</a>
+            <a href="fashion.html">Fashion</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="home.html">Home</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="sports.html">Sports</a>
+            <a href="toys.html">Toys</a>
+            <a href="pets.html">Pets</a>
+            <a href="clearance.html">Clearance</a>
+        </div>
+    </div>
+
+    <!-- Flash Sale Banner -->
+    <div class="flash-sale">
+        <div class="container">
+            <div class="sale-content">
+                <h2>⚡ FLASH SALE ⚡</h2>
+                <p>Up to 80% Off | Today Only</p>
+                <div class="timer">
+                    <span>03</span>:<span>15</span>:<span>47</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+            </div>
+            <div class="category-grid">
+                <a href="fashion.html" class="cat-item">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=200" alt="Fashion">
+                    <span>Fashion</span>
+                </a>
+                <a href="electronics.html" class="cat-item">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200" alt="Electronics">
+                    <span>Electronics</span>
+                </a>
+                <a href="home.html" class="cat-item">
+                    <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=200" alt="Home">
+                    <span>Home</span>
+                </a>
+                <a href="beauty.html" class="cat-item">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=200" alt="Beauty">
+                    <span>Beauty</span>
+                </a>
+                <a href="toys.html" class="cat-item">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=200" alt="Toys">
+                    <span>Toys</span>
+                </a>
+                <a href="sports.html" class="cat-item">
+                    <img src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?w=200" alt="Sports">
+                    <span>Sports</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Checkout with Telegram
+            </button>
+            <p class="shipping-note">Free shipping over $35</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>EazyExchange is your premier online destination for amazing deals on top brands. We connect you with quality products at unbeatable prices.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('📚 Visit our FAQ page for answers to common questions'); return false;">FAQ</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📦 Free shipping on orders over $35. Standard shipping 3-5 business days'); return false;">Shipping Info</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔄 30-day hassle-free returns. Items must be unused in original packaging'); return false;">Returns</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔍 Track your order using the tracking link sent to your email'); return false;">Track Order</a></li>
+                        <li><a href="#" onclick="showCustomNotification('💳 We accept: Gift Cards, Cash App, Cryptocurrency (BTC, ETH, USDT)'); return false;">Payment Methods</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('🏢 EazyExchange - Founded 2024. Your trusted online marketplace.'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📞 Contact us via WhatsApp +44 7536613651'); return false;">Contact</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📜 Read our terms and conditions'); return false;">Terms of Service</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔒 We respect your privacy. Read our privacy policy'); return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact & Payment</h4>
+                    <a href="https://wa.me/15551234567" class="whatsapp-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +44 7536613651
+                    </a>
+                    <div class="payment-methods">
+                        <p><strong>Secure Payment Methods:</strong></p>
+                        <p>• Gift Cards (Amazon, Visa, Mastercard)</p>
+                        <p>• Cash App ($Cashtag: @EazyExchange)</p>
+                        <p>• Cryptocurrency (BTC, ETH, USDT)</p>
+                        <p><strong>Payment Terms:</strong> 30% deposit required to secure your order. Balance due before shipping.</p>
+                        <p style="margin-top:8px;"><i class="fas fa-shield-alt"></i> 100% Buyer Protection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EazyExchange. All rights reserved. Your trusted online marketplace.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Make sure showCustomNotification is available
+        function showCustomNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <i class="fas fa-info"></i>
+                    </div>
+                    <div class="notification-message">${message}</div>
+                    <div class="notification-close" onclick="this.parentElement.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        // Also ensure all footer links use the custom notification
+        document.querySelectorAll('.footer-section a[href="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // The onclick already handles it, but this ensures it works
+            });
+        });
+    </script>
+</body>
+</html>

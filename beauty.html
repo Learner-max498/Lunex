@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty - EazyExchange</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>🔥 Free Shipping on Orders Over $35</span>
+            <span>📦 24h Dispatch | 30-Day Returns</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Eazy<span style="color: #FF6B35;">Exchange</span></h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for amazing deals...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Strip -->
+    <div class="categories-strip">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="fashion.html">Fashion</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="home.html">Home</a>
+            <a href="beauty.html" style="color: #FF6B35; font-weight: bold;">Beauty</a>
+            <a href="sports.html">Sports</a>
+            <a href="toys.html">Toys</a>
+            <a href="pets.html">Pets</a>
+            <a href="clearance.html">Clearance</a>
+        </div>
+    </div>
+
+    <!-- Category Header -->
+    <div class="category-header">
+        <div class="container">
+            <h1>Beauty & Personal Care</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Beauty</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section - All 20 Products -->
+    <section class="category-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Beauty</h2>
+                <div class="sort-dropdown">
+                    <select>
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/beauty/cerave-cleanser.jpg" alt="CeraVe Hydrating Cleanser" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">CeraVe Hydrating Facial Cleanser</h3>
+                        <div class="product-price">$14.99</div>
+                        <div class="product-rating">★★★★★ <span>(18.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:501, name:'CeraVe Hydrating Cleanser', price:14.99, image:'🧴'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:501, name:'CeraVe Hydrating Cleanser', price:14.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/beauty/ordinary-serum.jpg" alt="The Ordinary Serum" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">The Ordinary Niacinamide Serum</h3>
+                        <div class="product-price">$8.99</div>
+                        <div class="product-rating">★★★★½ <span>(14.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:502, name:'The Ordinary Serum', price:8.99, image:'💧'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:502, name:'The Ordinary Serum', price:8.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/beauty/drunk-elephant.jpg" alt="Drunk Elephant Protini Cream" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Drunk Elephant Protini Cream</h3>
+                        <div class="product-price">$59.99</div>
+                        <div class="product-rating">★★★★★ <span>(3.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:503, name:'Drunk Elephant Cream', price:59.99, image:'🧴'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:503, name:'Drunk Elephant Cream', price:59.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="images/beauty/kiehls-lotion.jpg" alt="Kiehl's Ultra Facial Cream" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Kiehl's Ultra Facial Cream</h3>
+                        <div class="product-price">$28.99</div>
+                        <div class="product-rating">★★★★½ <span>(5.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:504, name:'Kiehl\'s Facial Cream', price:28.99, image:'🧴'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:504, name:'Kiehl\'s Facial Cream', price:28.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="images/beauty/loreal-mascara.jpg" alt="L'Oreal Voluminous Mascara" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">L'Oreal Voluminous Mascara</h3>
+                        <div class="product-price">$9.99</div>
+                        <div class="product-rating">★★★★½ <span>(12.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:505, name:'L\'Oreal Mascara', price:9.99, image:'💄'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:505, name:'L\'Oreal Mascara', price:9.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="images/beauty/maybelline-foundation.jpg" alt="Maybelline Fit Me Foundation" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Maybelline Fit Me Foundation</h3>
+                        <div class="product-price">$7.99</div>
+                        <div class="product-rating">★★★★☆ <span>(9.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:506, name:'Maybelline Foundation', price:7.99, image:'💄'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:506, name:'Maybelline Foundation', price:7.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="images/beauty/nyx-eyeshadow.jpg" alt="NYX Ultimate Eyeshadow Palette" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">NYX Ultimate Eyeshadow Palette</h3>
+                        <div class="product-price">$16.99</div>
+                        <div class="product-rating">★★★★½ <span>(6.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:507, name:'NYX Eyeshadow Palette', price:16.99, image:'🎨'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:507, name:'NYX Eyeshadow Palette', price:16.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="images/beauty/olaplex-hair.jpg" alt="Olaplex No. 3" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Olaplex No. 3 Hair Perfector</h3>
+                        <div class="product-price">$26.99</div>
+                        <div class="product-rating">★★★★★ <span>(8.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:508, name:'Olaplex No.3', price:26.99, image:'💇'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:508, name:'Olaplex No.3', price:26.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <img src="images/beauty/dyson-hairdryer.jpg" alt="Dyson Supersonic Hair Dryer" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Dyson Supersonic Hair Dryer</h3>
+                        <div class="product-price">$399.99</div>
+                        <div class="product-rating">★★★★★ <span>(2.1k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:509, name:'Dyson Hair Dryer', price:399.99, image:'💨'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:509, name:'Dyson Hair Dryer', price:399.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <img src="images/beauty/gwp-perfume.jpg" alt="Glossier You Perfume" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Glossier You Eau de Parfum</h3>
+                        <div class="product-price">$58.99</div>
+                        <div class="product-rating">★★★★½ <span>(3.9k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:510, name:'Glossier You Perfume', price:58.99, image:'🌸'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:510, name:'Glossier You Perfume', price:58.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <img src="images/beauty/sol-de-janeiro.jpg" alt="Sol de Janeiro Bum Bum Cream" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Sol de Janeiro Bum Bum Cream</h3>
+                        <div class="product-price">$38.99</div>
+                        <div class="product-rating">★★★★★ <span>(7.5k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:511, name:'Brazilian Bum Bum Cream', price:38.99, image:'🧴'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:511, name:'Brazilian Bum Bum Cream', price:38.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <img src="images/beauty/first-aid-beauty.jpg" alt="First Aid Beauty Ultra Repair Cream" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">First Aid Beauty Ultra Repair Cream</h3>
+                        <div class="product-price">$28.99</div>
+                        <div class="product-rating">★★★★½ <span>(5.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:512, name:'FAB Ultra Repair Cream', price:28.99, image:'🧴'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:512, name:'FAB Ultra Repair Cream', price:28.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <img src="images/beauty/tatcha-dew.jpg" alt="Tatcha The Dewy Skin Cream" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Tatcha The Dewy Skin Cream</h3>
+                        <div class="product-price">$64.99</div>
+                        <div class="product-rating">★★★★★ <span>(2.4k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:513, name:'Tatcha Dewy Cream', price:64.99, image:'🧴'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:513, name:'Tatcha Dewy Cream', price:64.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <img src="images/beauty/laneige-mask.jpg" alt="Laneige Lip Sleeping Mask" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Laneige Lip Sleeping Mask</h3>
+                        <div class="product-price">$19.99</div>
+                        <div class="product-rating">★★★★½ <span>(10.3k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:514, name:'Laneige Lip Mask', price:19.99, image:'💋'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:514, name:'Laneige Lip Mask', price:19.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <img src="images/beauty/summer-fridays.jpg" alt="Summer Fridays Lip Butter Balm" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Summer Fridays Lip Butter Balm</h3>
+                        <div class="product-price">$19.99</div>
+                        <div class="product-rating">★★★★½ <span>(8.7k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:515, name:'Summer Fridays Lip Balm', price:19.99, image:'💄'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:515, name:'Summer Fridays Lip Balm', price:19.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <img src="images/beauty/rare-beauty-blush.jpg" alt="Rare Beauty Soft Pinch Liquid Blush" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Rare Beauty Soft Pinch Liquid Blush</h3>
+                        <div class="product-price">$19.99</div>
+                        <div class="product-rating">★★★★★ <span>(6.2k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:516, name:'Rare Beauty Blush', price:19.99, image:'💗'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:516, name:'Rare Beauty Blush', price:19.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <img src="images/beauty/fenty-beauty.jpg" alt="Fenty Beauty Pro Filt'r Foundation" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Fenty Beauty Pro Filt'r Foundation</h3>
+                        <div class="product-price">$32.99</div>
+                        <div class="product-rating">★★★★½ <span>(4.5k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:517, name:'Fenty Foundation', price:32.99, image:'💄'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:517, name:'Fenty Foundation', price:32.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <img src="images/beauty/charlotte-tilbury.jpg" alt="Charlotte Tilbury Pillow Talk" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Charlotte Tilbury Pillow Talk Duo</h3>
+                        <div class="product-price">$44.99</div>
+                        <div class="product-rating">★★★★★ <span>(3.8k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:518, name:'CT Pillow Talk Duo', price:44.99, image:'💄'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:518, name:'CT Pillow Talk Duo', price:44.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card">
+                    <img src="images/beauty/nars-orgasm.jpg" alt="NARS Orgasm Blush" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">NARS Orgasm Blush & Laguna Bronzer</h3>
+                        <div class="product-price">$38.99</div>
+                        <div class="product-rating">★★★★★ <span>(5.6k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:519, name:'NARS Orgasm Duo', price:38.99, image:'💗'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:519, name:'NARS Orgasm Duo', price:38.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card">
+                    <img src="images/beauty/mario-badescu.jpg" alt="Mario Badescu Facial Spray" class="product-image" onclick="openImageModal(this.src)" style="cursor: pointer;">
+                    <div class="product-info">
+                        <h3 class="product-name">Mario Badescu Facial Spray Trio</h3>
+                        <div class="product-price">$24.99</div>
+                        <div class="product-rating">★★★★½ <span>(7.1k sold)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-add" onclick="addToCart({id:520, name:'Mario Badescu Spray Set', price:24.99, image:'💦'})"><i class="fas fa-cart-plus"></i> Add</button>
+                            <button class="btn-whatsapp-small" onclick="orderNow({id:520, name:'Mario Badescu Spray Set', price:24.99})"><i class="fab fa-whatsapp"></i> Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn-whatsapp" onclick="orderViaWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Checkout with Telegram
+            </button>
+            <p class="shipping-note">Free shipping over $35</p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" onclick="closeImageModal()">
+        <span onclick="closeImageModal()">&times;</span>
+        <img id="modalImage" src="" alt="Product Image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>EazyExchange is your premier online destination for amazing deals on top brands. We connect you with quality products at unbeatable prices.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('📚 Visit our FAQ page for answers to common questions'); return false;">FAQ</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📦 Free shipping on orders over $35. Standard shipping 3-5 business days'); return false;">Shipping Info</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔄 30-day hassle-free returns. Items must be unused in original packaging'); return false;">Returns</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔍 Track your order using the tracking link sent to your email'); return false;">Track Order</a></li>
+                        <li><a href="#" onclick="showCustomNotification('💳 We accept: Gift Cards, Cash App, Cryptocurrency (BTC, ETH, USDT)'); return false;">Payment Methods</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" onclick="showCustomNotification('🏢 EazyExchange - Founded 2024. Your trusted online marketplace.'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📞 Contact us via WhatsApp +44 7536613651'); return false;">Contact</a></li>
+                        <li><a href="#" onclick="showCustomNotification('📜 Read our terms and conditions'); return false;">Terms of Service</a></li>
+                        <li><a href="#" onclick="showCustomNotification('🔒 We respect your privacy. Read our privacy policy'); return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact & Payment</h4>
+                    <a href="https://wa.me/15551234567" class="whatsapp-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +44 7536613651
+                    </a>
+                    <div class="payment-methods">
+                        <p><strong>Secure Payment Methods:</strong></p>
+                        <p>• Gift Cards (Amazon, Visa, Mastercard)</p>
+                        <p>• Cash App ($Cashtag: @EazyExchange)</p>
+                        <p>• Cryptocurrency (BTC, ETH, USDT)</p>
+                        <p><strong>Payment Terms:</strong> 30% deposit required to secure your order. Balance due before shipping.</p>
+                        <p style="margin-top:8px;"><i class="fas fa-shield-alt"></i> 100% Buyer Protection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EazyExchange. All rights reserved. Your trusted online marketplace.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function openImageModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+        
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
